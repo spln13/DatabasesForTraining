@@ -98,3 +98,4 @@ INSERT INTO `student` VALUES ('201215126', '万芳', '女', 19, 'MA');
 COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;
+ 
