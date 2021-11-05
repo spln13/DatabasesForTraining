@@ -11,7 +11,7 @@
  Target Server Version : 80026
  File Encoding         : 65001
 
- Date: 05/11/2021 23:06:36
+ Date: 05/11/2021 23:19:44
 */
 
 SET NAMES utf8mb4;
@@ -42,6 +42,7 @@ INSERT INTO `course` VALUES ('4', '操作系统', '6', 3);
 INSERT INTO `course` VALUES ('5', '数据结构', '7', 4);
 INSERT INTO `course` VALUES ('6', '数据处理', '5', 2);
 INSERT INTO `course` VALUES ('7', 'PASCAL语言', '6', 4);
+INSERT INTO `course` VALUES ('8', '离散数学', NULL, 3);
 COMMIT;
 
 -- ----------------------------
@@ -92,6 +93,7 @@ INSERT INTO `student` VALUES ('201215122', '刘晨', '女', 19, 'CS');
 INSERT INTO `student` VALUES ('201215123', '王敏', '女', 19, 'MA');
 INSERT INTO `student` VALUES ('201215124', '王志', '男', 20, 'IS');
 INSERT INTO `student` VALUES ('201215125', '张立', '男', 19, 'IS');
+INSERT INTO `student` VALUES ('201215126', '万芳', '女', 19, 'MA');
 COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;
