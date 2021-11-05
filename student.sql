@@ -11,7 +11,7 @@
  Target Server Version : 80026
  File Encoding         : 65001
 
- Date: 05/11/2021 23:19:44
+ Date: 05/11/2021 23:28:53
 */
 
 SET NAMES utf8mb4;
@@ -43,6 +43,7 @@ INSERT INTO `course` VALUES ('5', '数据结构', '7', 4);
 INSERT INTO `course` VALUES ('6', '数据处理', '5', 2);
 INSERT INTO `course` VALUES ('7', 'PASCAL语言', '6', 4);
 INSERT INTO `course` VALUES ('8', '离散数学', NULL, 3);
+INSERT INTO `course` VALUES ('9', '线性代数', NULL, 3);
 COMMIT;
 
 -- ----------------------------
