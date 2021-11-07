@@ -11,7 +11,7 @@
  Target Server Version : 80026
  File Encoding         : 65001
 
- Date: 07/11/2021 14:22:48
+ Date: 07/11/2021 15:01:24
 */
 
 SET NAMES utf8mb4;
@@ -83,6 +83,9 @@ INSERT INTO `s` VALUES ('95020101', '张会', 22, '男', '化工');
 INSERT INTO `s` VALUES ('95020102', '好人', 21, '男', '化工');
 INSERT INTO `s` VALUES ('95020103', '会类', 24, '男', '化工');
 INSERT INTO `s` VALUES ('95020104', '诸葛亮', 23, '男', '数学');
+INSERT INTO `s` VALUES ('95020301', '张亮', 21, '男', '数学');
+INSERT INTO `s` VALUES ('95020302', '张珂', 23, '女', '计算机');
+INSERT INTO `s` VALUES ('95020303', '詹姆斯', 23, '男', '数学');
 COMMIT;
 
 -- ----------------------------
@@ -163,6 +166,7 @@ INSERT INTO `sc` VALUES ('95020103', '2', 80);
 INSERT INTO `sc` VALUES ('95020103', '3', 96);
 INSERT INTO `sc` VALUES ('95020103', '4', 80);
 INSERT INTO `sc` VALUES ('95020103', '5', 80);
+INSERT INTO `sc` VALUES ('95020303', '6', NULL);
 COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;
