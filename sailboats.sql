@@ -4,6 +4,28 @@
 use sailboats;
 set names utf8;
 
+DROP TABLE IF EXISTS `sailors`;
+CREATE TABLE `sailors` (
+    `Snum` varchar(20) DEFAULT NULL, 
+    `Sname` varchar(20) DEFAULT NULL,
+    `val` int DEFAULT NULL,
+    `Sage` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+DROP TABLE IF EXISTS `boats`;
+CREATE TABLE `boats` (
+    `num` varchar(20) DEFAULT NULL, 
+    `name` varchar(20) DEFAULT NULL,
+    `color` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+DROP TABLE IF EXISTS `reserves`;
+CREATE TABLE `reserves` (
+    `Snum` varchar(20) DEFAULT NULL, 
+    `Bnum` varchar(20) DEFAULT NULL,
+    `date` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
 insert into sailors
 values('22','Dustin',7,45);
 insert into sailors
