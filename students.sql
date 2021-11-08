@@ -11,7 +11,7 @@
  Target Server Version : 80026
  File Encoding         : 65001
 
- Date: 07/11/2021 20:01:24
+ Date: 08/11/2021 20:51:07
 */
 
 SET NAMES utf8mb4;
@@ -44,7 +44,7 @@ INSERT INTO `c` VALUES ('5', '数据结构', '7', 4);
 INSERT INTO `c` VALUES ('6', '数据处理', '5', 2);
 INSERT INTO `c` VALUES ('7', 'PASCAL语言', '6', 4);
 INSERT INTO `c` VALUES ('8', '离散数学', NULL, 3);
-INSERT INTO `c` VALUES ('9', '线性代数', NULL, 3);
+INSERT INTO `c` VALUES ('9', '线性代数', '2', 3);
 COMMIT;
 
 -- ----------------------------
@@ -109,6 +109,10 @@ BEGIN;
 INSERT INTO `sc` VALUES ('201215121', '1', 92);
 INSERT INTO `sc` VALUES ('201215121', '2', 85);
 INSERT INTO `sc` VALUES ('201215121', '3', 88);
+INSERT INTO `sc` VALUES ('201215121', '4', 87);
+INSERT INTO `sc` VALUES ('201215121', '5', 91);
+INSERT INTO `sc` VALUES ('201215121', '7', 88);
+INSERT INTO `sc` VALUES ('201215121', '9', 82);
 INSERT INTO `sc` VALUES ('201215122', '10', 97);
 INSERT INTO `sc` VALUES ('201215122', '2', 90);
 INSERT INTO `sc` VALUES ('201215122', '3', 80);
