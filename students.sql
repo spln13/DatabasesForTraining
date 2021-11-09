@@ -11,7 +11,7 @@
  Target Server Version : 80026
  File Encoding         : 65001
 
- Date: 08/11/2021 21:56:10
+ Date: 09/11/2021 12:40:19
 */
 
 SET NAMES utf8mb4;
@@ -58,6 +58,7 @@ CREATE TABLE `s` (
   `Sage` smallint DEFAULT NULL,
   `Ssex` char(2) DEFAULT NULL,
   `Sdept` char(20) DEFAULT NULL,
+  `Sclass` varchar(4) DEFAULT NULL,
   PRIMARY KEY (`Sno`),
   UNIQUE KEY `Sname` (`Sname`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
@@ -66,31 +67,31 @@ CREATE TABLE `s` (
 -- Records of s
 -- ----------------------------
 BEGIN;
-INSERT INTO `s` VALUES ('201215121', '李勇', 20, '男', '计算机');
-INSERT INTO `s` VALUES ('201215122', '刘晨', 19, '女', '计算机');
-INSERT INTO `s` VALUES ('201215123', '王敏', 19, '女', '文学');
-INSERT INTO `s` VALUES ('201215124', '王志', 20, '男', '信科');
-INSERT INTO `s` VALUES ('201215125', '张立', 19, '男', '信科');
-INSERT INTO `s` VALUES ('201215126', '万芳', 19, '女', '文学');
-INSERT INTO `s` VALUES ('201215127', '张三', 24, '男', '财管');
-INSERT INTO `s` VALUES ('201215128', '韩金龙', 18, '男', '数据');
-INSERT INTO `s` VALUES ('201215129', '佟丽娅', 18, '女', '文学');
-INSERT INTO `s` VALUES ('201215130', '柳君', 18, '女', '化工');
-INSERT INTO `s` VALUES ('95010101', '赵清', 25, '男', '计算机');
-INSERT INTO `s` VALUES ('95010102', '王一', 21, '女', '计算机');
-INSERT INTO `s` VALUES ('95010103', '李美', 21, '男', '计算机');
-INSERT INTO `s` VALUES ('95010201', '人门', 24, '女', '计算机');
-INSERT INTO `s` VALUES ('95010202', '王晓', 23, '女', '计算机');
-INSERT INTO `s` VALUES ('95010203', '李鸿', 25, '女', '计算机');
-INSERT INTO `s` VALUES ('95010204', '打法', 24, '男', '计算机');
-INSERT INTO `s` VALUES ('95010205', '居丽', 24, '女', '计算机');
-INSERT INTO `s` VALUES ('95020101', '张会', 22, '男', '化工');
-INSERT INTO `s` VALUES ('95020102', '好人', 21, '男', '化工');
-INSERT INTO `s` VALUES ('95020103', '会类', 24, '男', '化工');
-INSERT INTO `s` VALUES ('95020104', '诸葛亮', 23, '男', '数学');
-INSERT INTO `s` VALUES ('95020301', '张亮', 21, '男', '数学');
-INSERT INTO `s` VALUES ('95020302', '张珂', 23, '女', '计算机');
-INSERT INTO `s` VALUES ('95020303', '詹姆斯', 23, '男', '数学');
+INSERT INTO `s` VALUES ('201215121', '李勇', 20, '男', '计算机', '00');
+INSERT INTO `s` VALUES ('201215122', '刘晨', 19, '女', '计算机', '00');
+INSERT INTO `s` VALUES ('201215123', '王敏', 19, '女', '文学', '');
+INSERT INTO `s` VALUES ('201215124', '王志', 20, '男', '信科', '');
+INSERT INTO `s` VALUES ('201215125', '张立', 19, '男', '信科', NULL);
+INSERT INTO `s` VALUES ('201215126', '万芳', 19, '女', '文学', NULL);
+INSERT INTO `s` VALUES ('201215127', '张三', 24, '男', '财管', NULL);
+INSERT INTO `s` VALUES ('201215128', '韩金龙', 18, '男', '数据', NULL);
+INSERT INTO `s` VALUES ('201215129', '佟丽娅', 18, '女', '文学', NULL);
+INSERT INTO `s` VALUES ('201215130', '柳君', 18, '女', '化工', NULL);
+INSERT INTO `s` VALUES ('95010101', '赵清', 25, '男', '计算机', NULL);
+INSERT INTO `s` VALUES ('95010102', '王一', 21, '女', '计算机', NULL);
+INSERT INTO `s` VALUES ('95010103', '李美', 21, '男', '计算机', NULL);
+INSERT INTO `s` VALUES ('95010201', '人门', 24, '女', '计算机', NULL);
+INSERT INTO `s` VALUES ('95010202', '王晓', 23, '女', '计算机', NULL);
+INSERT INTO `s` VALUES ('95010203', '李鸿', 25, '女', '计算机', NULL);
+INSERT INTO `s` VALUES ('95010204', '打法', 24, '男', '计算机', NULL);
+INSERT INTO `s` VALUES ('95010205', '居丽', 24, '女', '计算机', NULL);
+INSERT INTO `s` VALUES ('95020101', '张会', 22, '男', '化工', NULL);
+INSERT INTO `s` VALUES ('95020102', '好人', 21, '男', '化工', NULL);
+INSERT INTO `s` VALUES ('95020103', '会类', 24, '男', '化工', NULL);
+INSERT INTO `s` VALUES ('95020104', '诸葛亮', 23, '男', '数学', NULL);
+INSERT INTO `s` VALUES ('95020301', '张亮', 21, '男', '数学', NULL);
+INSERT INTO `s` VALUES ('95020302', '张珂', 23, '女', '计算机', NULL);
+INSERT INTO `s` VALUES ('95020303', '詹姆斯', 23, '男', '数学', NULL);
 COMMIT;
 
 -- ----------------------------
@@ -112,11 +113,14 @@ CREATE TABLE `sc` (
 -- ----------------------------
 BEGIN;
 INSERT INTO `sc` VALUES ('201215121', '1', 92);
+INSERT INTO `sc` VALUES ('201215121', '10', 78);
 INSERT INTO `sc` VALUES ('201215121', '2', 85);
 INSERT INTO `sc` VALUES ('201215121', '3', 88);
 INSERT INTO `sc` VALUES ('201215121', '4', 87);
 INSERT INTO `sc` VALUES ('201215121', '5', 91);
+INSERT INTO `sc` VALUES ('201215121', '6', 91);
 INSERT INTO `sc` VALUES ('201215121', '7', 88);
+INSERT INTO `sc` VALUES ('201215121', '8', 91);
 INSERT INTO `sc` VALUES ('201215121', '9', 82);
 INSERT INTO `sc` VALUES ('201215121', 'C2', 99);
 INSERT INTO `sc` VALUES ('201215122', '10', 97);
