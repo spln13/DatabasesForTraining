@@ -11,7 +11,7 @@
  Target Server Version : 80026
  File Encoding         : 65001
 
- Date: 07/11/2021 20:01:37
+ Date: 09/11/2021 09:18:07
 */
 
 SET NAMES utf8mb4;
@@ -23,13 +23,13 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `departments`;
 CREATE TABLE `departments` (
   `department_id` int NOT NULL AUTO_INCREMENT,
-  `department_name` varchar(3) DEFAULT NULL,
+  `department_name` varchar(5) CHARACTER SET gb2312 COLLATE gb2312_chinese_ci DEFAULT NULL,
   `manager_id` int DEFAULT NULL,
   `location_id` int DEFAULT NULL,
   PRIMARY KEY (`department_id`),
   KEY `loc_id_fk` (`location_id`),
   CONSTRAINT `loc_id_fk` FOREIGN KEY (`location_id`) REFERENCES `locations` (`location_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=271 DEFAULT CHARSET=gb2312;
+) ENGINE=InnoDB AUTO_INCREMENT=282 DEFAULT CHARSET=gb2312;
 
 -- ----------------------------
 -- Records of departments
@@ -62,6 +62,7 @@ INSERT INTO `departments` VALUES (240, 'Gov', NULL, 1700);
 INSERT INTO `departments` VALUES (250, 'Ret', NULL, 1700);
 INSERT INTO `departments` VALUES (260, 'Rec', NULL, 1700);
 INSERT INTO `departments` VALUES (270, 'Pay', NULL, 1700);
+INSERT INTO `departments` VALUES (280, 'SALES', NULL, 1700);
 COMMIT;
 
 -- ----------------------------
@@ -85,7 +86,7 @@ CREATE TABLE `employees` (
   KEY `job_id_fk` (`job_id`),
   CONSTRAINT `dept_id_fk` FOREIGN KEY (`department_id`) REFERENCES `departments` (`department_id`),
   CONSTRAINT `job_id_fk` FOREIGN KEY (`job_id`) REFERENCES `jobs` (`job_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=207 DEFAULT CHARSET=gb2312;
+) ENGINE=InnoDB AUTO_INCREMENT=210 DEFAULT CHARSET=gb2312;
 
 -- ----------------------------
 -- Records of employees
@@ -198,6 +199,9 @@ INSERT INTO `employees` VALUES (203, 'Susan', 'Mavris', 'SMAVRIS', '515.123.7777
 INSERT INTO `employees` VALUES (204, 'Hermann', 'Baer', 'HBAER', '515.123.8888', 'PR_REP', 10000.00, NULL, 101, 70, '2016-03-03 00:00:00');
 INSERT INTO `employees` VALUES (205, 'Shelley', 'Higgins', 'SHIGGINS', '515.123.8080', 'AC_MGR', 12000.00, NULL, 101, 110, '2016-03-03 00:00:00');
 INSERT INTO `employees` VALUES (206, 'William', 'Gietz', 'WGIETZ', '515.123.8181', 'AC_ACCOUNT', 8300.00, NULL, 205, 110, '2016-03-03 00:00:00');
+INSERT INTO `employees` VALUES (207, 'Wenkey', 'Huang', 'CNULL', '515.124.8086', 'AD_ASST', 4999.00, NULL, NULL, 280, '2018-12-20 08:00:00');
+INSERT INTO `employees` VALUES (208, 'Leborn', 'James', 'MASS', '515.125.8888', 'SA_REP', 8000.00, NULL, NULL, 280, '2021-02-10 08:48:59');
+INSERT INTO `employees` VALUES (209, 'Hill', 'Paul', 'TAYLOR', '650.509.9212', 'SH_CLERK', 8000.00, NULL, 101, 10, '2021-11-02 08:50:27');
 COMMIT;
 
 -- ----------------------------
@@ -259,7 +263,7 @@ INSERT INTO `locations` VALUES (1000, '1297 Via Cola di Rie', '00989', 'Roma', N
 INSERT INTO `locations` VALUES (1100, '93091 Calle della Testa', '10934', 'Venice', NULL, 'IT');
 INSERT INTO `locations` VALUES (1200, '2017 Shinjuku-ku', '1689', 'Tokyo', 'Tokyo Prefecture', 'JP');
 INSERT INTO `locations` VALUES (1300, '9450 Kamiya-cho', '6823', 'Hiroshima', NULL, 'JP');
-INSERT INTO `locations` VALUES (1400, '2014 Jabberwocky Rd', '26192', 'Southlake', 'Texas', 'US');
+INSERT INTO `locations` VALUES (1400, '11 W 31st St', '10001', 'New York', 'New York', 'US');
 INSERT INTO `locations` VALUES (1500, '2011 Interiors Blvd', '99236', 'South San Francisco', 'California', 'US');
 INSERT INTO `locations` VALUES (1600, '2007 Zagora St', '50090', 'South Brunswick', 'New Jersey', 'US');
 INSERT INTO `locations` VALUES (1700, '2004 Charade Rd', '98199', 'Seattle', 'Washington', 'US');
