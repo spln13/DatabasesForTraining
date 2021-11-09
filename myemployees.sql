@@ -11,7 +11,7 @@
  Target Server Version : 80026
  File Encoding         : 65001
 
- Date: 09/11/2021 09:18:07
+ Date: 09/11/2021 13:19:34
 */
 
 SET NAMES utf8mb4;
@@ -86,7 +86,7 @@ CREATE TABLE `employees` (
   KEY `job_id_fk` (`job_id`),
   CONSTRAINT `dept_id_fk` FOREIGN KEY (`department_id`) REFERENCES `departments` (`department_id`),
   CONSTRAINT `job_id_fk` FOREIGN KEY (`job_id`) REFERENCES `jobs` (`job_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=210 DEFAULT CHARSET=gb2312;
+) ENGINE=InnoDB AUTO_INCREMENT=212 DEFAULT CHARSET=gb2312;
 
 -- ----------------------------
 -- Records of employees
@@ -202,6 +202,8 @@ INSERT INTO `employees` VALUES (206, 'William', 'Gietz', 'WGIETZ', '515.123.8181
 INSERT INTO `employees` VALUES (207, 'Wenkey', 'Huang', 'CNULL', '515.124.8086', 'AD_ASST', 4999.00, NULL, NULL, 280, '2018-12-20 08:00:00');
 INSERT INTO `employees` VALUES (208, 'Leborn', 'James', 'MASS', '515.125.8888', 'SA_REP', 8000.00, NULL, NULL, 280, '2021-02-10 08:48:59');
 INSERT INTO `employees` VALUES (209, 'Hill', 'Paul', 'TAYLOR', '650.509.9212', 'SH_CLERK', 8000.00, NULL, 101, 10, '2021-11-02 08:50:27');
+INSERT INTO `employees` VALUES (210, 'CLARK', 'CLARK', 'JFLLL', '650.213.359', 'SA_REP', 10800.00, NULL, 121, 50, '2021-11-09 13:08:13');
+INSERT INTO `employees` VALUES (211, 'MILLER', 'MILLER', 'HBFA', '650.213.999', 'SH_CLERK', 7800.00, NULL, 121, 50, '2021-11-09 13:08:56');
 COMMIT;
 
 -- ----------------------------
