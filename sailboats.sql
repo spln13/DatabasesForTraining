@@ -11,7 +11,7 @@
  Target Server Version : 80026
  File Encoding         : 65001
 
- Date: 14/11/2021 15:10:27
+ Date: 14/11/2021 15:19:14
 */
 
 SET NAMES utf8mb4;
@@ -44,9 +44,9 @@ COMMIT;
 DROP TABLE IF EXISTS `reserves`;
 CREATE TABLE `reserves` (
   `sid` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `big` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `bid` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `day` date NOT NULL,
-  PRIMARY KEY (`sid`,`big`,`day`)
+  PRIMARY KEY (`sid`,`bid`,`day`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- ----------------------------
